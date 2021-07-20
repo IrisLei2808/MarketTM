@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { AuthLayoutComponent } from './layout/shared-layout/auth-layout/auth-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SharedModule} from '../app/shared/shared.module';
-import { ContentLayoutModule } from './layout/shared-layout/content-layout/content-layout.module';
 import {CountdownModule} from 'ngx-countdown';
+import { ContentLayoutModule } from './layout/shared-layout/content-layout/content-layout.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +19,8 @@ import {CountdownModule} from 'ngx-countdown';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    ContentLayoutModule,
-    CountdownModule
+    CountdownModule,
+    ContentLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
