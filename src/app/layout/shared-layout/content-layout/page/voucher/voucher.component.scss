@@ -1,0 +1,30 @@
+.mat-card {
+    cursor: pointer;
+    width: 287px;
+    height: 45px;
+    border-radius:20px;
+    border: 3px solid whitesmoke;
+    font-size: 18px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+    hyphens: auto;
+}
+.mat-card > img {
+    width: 32px;
+    height: 32px;
+}
+
+.mat-card:hover {
+   box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .25);
+}
+.voucher {
+    margin-top: 220px;
+    margin-left: 310px;
+
+    display: flex;
+}
+
