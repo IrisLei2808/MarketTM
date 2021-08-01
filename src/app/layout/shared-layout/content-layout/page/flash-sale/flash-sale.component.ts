@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CountdownConfig } from 'ngx-countdown';
+import { FLASH_PRODUCTS } from '../data/mock-products';
+import { ProductFlashSale } from '../data/ProductFlashSale';
 
 const CountdownTimeUnits: Array<[string, number]> = [
   ['Y', 1000 * 60 * 60 * 24 * 365], // years
@@ -14,9 +16,11 @@ const CountdownTimeUnits: Array<[string, number]> = [
 @Component({
   selector: 'app-flash-sale',
   templateUrl: './flash-sale.component.html',
-  styleUrls: ['./flash-sale.component.scss']
+  styleUrls: ['./flash-sale.component.scss'],
 })
 export class FlashSaleComponent implements OnInit {
+  products: ProductFlashSale[] = FLASH_PRODUCTS;
+
   config: CountdownConfig = {
     leftTime: 60 * 60 * 25,
     formatDate: ({ date, formatStr }) => {
@@ -26,17 +30,18 @@ export class FlashSaleComponent implements OnInit {
         if (current.indexOf(name) !== -1) {
           const v = Math.floor(duration / unit);
           duration -= v * unit;
-          return current.replace(new RegExp(`${name}+`, 'g'), (match: string) => {
-            return v.toString().padStart(match.length, '0');
-          });
+          return current.replace(
+            new RegExp(`${name}+`, 'g'),
+            (match: string) => {
+              return v.toString().padStart(match.length, '0');
+            }
+          );
         }
         return current;
       }, formatStr);
     },
   };
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

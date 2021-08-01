@@ -14,16 +14,17 @@ import { TmMallComponent } from './page/tm-mall/tm-mall.component';
 import { VoucherComponent } from './page/voucher/voucher.component';
 import { FooterComponent } from 'src/app/shared/component/footer/footer.component';
 import { HeaderComponent } from 'src/app/shared/component/header/header.component';
+import { FlashSaleCardComponent } from 'src/app/shared/component/flash-sale-card/flash-sale-card.component';
 import { MaterialModule } from 'src/app/shared/material.module';
-import {CountdownModule} from 'ngx-countdown';
-
-
+import { CountdownModule } from 'ngx-countdown';
+import { TruncatePipe } from 'src/app/shared/component/flash-sale-card/flash-sale-card-pipe';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     ContentLayoutComponent,
+    FlashSaleCardComponent,
     SearchInputComponent,
     MenuSliderComponent,
     FlashSaleComponent,
@@ -35,11 +36,8 @@ import {CountdownModule} from 'ngx-countdown';
     VoucherComponent,
     ContactUsComponent,
     PaymentMethodComponent,
+    TruncatePipe,
   ],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    CountdownModule
-  ]
+  imports: [CommonModule, MaterialModule, CountdownModule],
 })
-export class ContentLayoutModule { }
+export class ContentLayoutModule {}

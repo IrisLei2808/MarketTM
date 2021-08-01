@@ -1,16 +1,25 @@
-<h3>Flash Sale</h3>
-<mat-card>
+<div class="flashContainer">
+  <h3>Flash Sale</h3>
+  <mat-card class="card">
     On Sale Now
-    <p style="color: black; padding-left: 100px; padding-top: 11px;">Ending in</p>
-    <mat-button-toggle-group name="fontStyle" aria-label="Font Style" style="color: white; margin: 50px">
-        <mat-button-toggle value="bold">
-            <countdown [config]="config"></countdown>
-        </mat-button-toggle>
-
-      </mat-button-toggle-group>
-      <a class="" title="Flash Sale" href="">SHOP ALL PRODUCTS</a>
-</mat-card>
-
-<h3>code tiep di anh</h3>
-
-
+    <p style="color: black; padding-left: 100px; padding-top: 11px">
+      Ending in
+    </p>
+    <mat-button-toggle-group
+      name="fontStyle"
+      aria-label="Font Style"
+      style="color: white; margin: 50px"
+    >
+      <mat-button-toggle value="bold">
+        <countdown [config]="config"></countdown>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+    <a class="" title="Flash Sale" href="">SHOP ALL PRODUCTS</a>
+  </mat-card>
+  <mat-card class="productSale">
+    <app-flash-sale-card
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-flash-sale-card>
+  </mat-card>
+</div>

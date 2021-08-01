@@ -6,18 +6,14 @@ import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
-  declarations: [
-    MessageErrorComponent,
-    SpinnerComponent
-  ],
+  declarations: [MessageErrorComponent, SpinnerComponent],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
-  ]
+    RouterModule,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
