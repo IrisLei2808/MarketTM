@@ -1,0 +1,77 @@
+.flashContainer {
+    width: 1270px;
+    margin: 0 auto;
+    border-width: 6px;
+  }
+  h3 {
+    margin-top: 20px;
+    font-family: Roboto-Regular;
+    font-size: 25px;
+    color: #424242;
+  }
+
+  .listItem {
+    height: 0px;
+    width: 280px;
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+
+    &:hover {
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      cursor: pointer;
+
+    }
+  }
+
+  .productImage > .listColumn {
+    height: 180px;
+    border-right: 1px solid #ccc;
+    &:hover {
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        cursor: pointer;
+        border: 1px solid black;
+      }
+
+  }
+
+   .listColumn > div > img {
+       max-width: 67px;
+       height: 67px;
+       margin: 20px 15px  auto !important;
+   } 
+
+  .productSale {
+    height: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f57224;
+    box-shadow: none;
+    margin-top: -130px;
+  }
+  
+  p {
+   height: 10px;
+   text-align: center;
+   //  margin-left: 120px;
+  }
+  h5 {
+     text-align: center;
+     color: #9e9e9e;
+  }
+  .productImage {
+      
+    width: 100%;
+    height: 10%;
+    border-radius: 5px;
+    display: flex;
+    background-color: rgb(160, 157, 157, 0.3);
+  }
+  .productCollection {
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+  }
+  

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ProductFlashSale } from 'src/app/layout/shared-layout/content-layout/page/data/ProductFlashSale';
+import { ProductFlashSale } from 'src/app/data/ProductFlashSale';
 
 @Component({
   selector: 'app-flash-sale-card',
