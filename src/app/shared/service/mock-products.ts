@@ -1,4 +1,4 @@
-import { ProductFlashSale } from './ProductFlashSale';
+import { ProductFlashSale } from "src/app/data/ProductFlashSale";
 
 export const FLASH_PRODUCTS: ProductFlashSale[] = [
   {
@@ -46,4 +46,5 @@ export const FLASH_PRODUCTS: ProductFlashSale[] = [
     discount: 17000,
     percent: 39,
   },
+  
 ];

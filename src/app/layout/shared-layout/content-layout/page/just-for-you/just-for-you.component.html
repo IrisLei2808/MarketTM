@@ -1,1 +1,29 @@
-<p>just-for-you works!</p>
+<div class="flashContainer">
+    <h3>Just For You</h3>
+
+    <mat-card class="productSale">
+      <app-flash-sale-card
+        *ngFor="let product of products"
+        [product]="product"
+      ></app-flash-sale-card>
+    </mat-card>
+
+    <mat-card class="productSale">
+      <app-flash-sale-card
+        *ngFor="let product of products"
+        [product]="product"
+      ></app-flash-sale-card>
+    </mat-card>
+
+    <mat-card class="productSale">
+      <app-flash-sale-card
+        *ngFor="let product of products"
+        [product]="product"
+      ></app-flash-sale-card>
+    </mat-card>
+  </div>
+
+  <div class="card-jfy-load-more J_LoadMore" data-spm-click="gostr=/lzdhome.just4u.more;locaid=dmore;" data-spm-anchor-id="a2o4n.home.just4u.dmore">
+    <a class="button J_LoadMoreButton">Load More</a>
+  </div>
+  

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CountdownConfig } from 'ngx-countdown';
-import { FLASH_PRODUCTS } from '../data/mock-products';
-import { ProductFlashSale } from '../data/ProductFlashSale';
+import { ProductFlashSale } from 'src/app/data/ProductFlashSale';
+import { FLASH_PRODUCTS } from 'src/app/shared/service/mock-products';
 
 const CountdownTimeUnits: Array<[string, number]> = [
   ['Y', 1000 * 60 * 60 * 24 * 365], // years
