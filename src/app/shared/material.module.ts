@@ -20,7 +20,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -45,7 +45,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatDividerModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -67,7 +68,8 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     MatDividerModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }
