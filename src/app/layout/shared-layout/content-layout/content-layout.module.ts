@@ -38,6 +38,12 @@ import { TruncatePipe } from 'src/app/shared/component/flash-sale-card/flash-sal
     PaymentMethodComponent,
     TruncatePipe,
   ],
+  exports: [
+    HeaderComponent, 
+    FooterComponent,
+    SearchInputComponent,
+    ContactUsComponent
+  ],
   imports: [CommonModule, MaterialModule, CountdownModule],
 })
 export class ContentLayoutModule {}

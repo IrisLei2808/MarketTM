@@ -1,1 +1,64 @@
-<p>register works!</p>
+<div style="display: flex; flex-direction: column;">
+  <app-header></app-header>
+  <app-search-input></app-search-input>
+  <div class="title-login">
+    <h3>Welcome to T&M Market! Please register</h3>
+    <p>Have account? <a style="color: #1a9cb7; cursor: pointer;" href="/login">Login</a> here.</p>
+  </div>
+  <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+
+      <form class="example-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-card-content>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" required formControlName="username">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" type="password" required formControlName="password">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" type="email" required formControlName="email">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Address" required formControlName="address">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Full Name" required formControlName="fullname">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput type="string" placeholder="Phone Number" required formControlName="phonenumber">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput type="string" placeholder="Date Of Birth" required formControlName="dob">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Gender</mat-label>
+            <mat-select [(value)]="selected" formControlName="gender">
+              <mat-option value="male">Male</mat-option>
+              <mat-option value="fermale">Fermale</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </mat-card-content>
+
+        <button mat-stroked-button color="accent" class="btn-block" type="submit">Register</button>
+
+      </form>
+    </mat-card>
+  </div>
+
+  <app-contact-us></app-contact-us>
+  <app-footer></app-footer>
+
+</div>
