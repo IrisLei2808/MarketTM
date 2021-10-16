@@ -42,7 +42,8 @@ import { TruncatePipe } from 'src/app/shared/component/flash-sale-card/flash-sal
     HeaderComponent, 
     FooterComponent,
     SearchInputComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    VoucherComponent
   ],
   imports: [CommonModule, MaterialModule, CountdownModule],
 })

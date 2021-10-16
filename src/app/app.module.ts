@@ -10,11 +10,14 @@ import {CountdownModule} from 'ngx-countdown';
 import { ContentLayoutModule } from './layout/shared-layout/content-layout/content-layout.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailLayoutComponent } from './layout/detail-layout/detail-layout.component';
+import { MaterialModule } from './shared/material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthLayoutComponent,
+    DetailLayoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     CountdownModule,
     ContentLayoutModule,
     AuthModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

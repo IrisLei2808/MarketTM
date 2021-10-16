@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductFlashSale } from 'src/app/data/ProductFlashSale';
 
 @Component({
@@ -20,7 +21,14 @@ export class FlashSaleCardComponent implements OnInit {
     return shortened;
   }
 
-  constructor() {}
+  constructor(private router:Router) {}
 
   ngOnInit(): void {}
+
+  navigate(){
+    //do your any operations
+    this.router.navigate(['detail']);
+    //also you can pass like this,
+   //  this.router.navigateByURL(['path']);
+    }
 }
