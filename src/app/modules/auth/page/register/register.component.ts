@@ -37,20 +37,38 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    var formData: any = new FormData();
-    formData.append("userName", this.formGroup.get('username').value);
-    formData.append("password", this.formGroup.get('password').value);
-    formData.append("email", this.formGroup.get('email').value);
-    formData.append("address", this.formGroup.get('address').value);
-    formData.append("fullName", this.formGroup.get('fullname').value);
-    formData.append("phone", this.formGroup.get('phonenumber').value);
-    formData.append("gender", this.formGroup.get('gender').value);
-    formData.append("dob", this.formGroup.get('dob').value);
+  // onSubmit() {
+  //   var formData: any = new FormData();
+  //   formData.append("userName", this.formGroup.get('username').value);
+  //   formData.append("password", this.formGroup.get('password').value);
+  //   formData.append("email", this.formGroup.get('email').value);
+  //   formData.append("address", this.formGroup.get('address').value);
+  //   formData.append("fullName", this.formGroup.get('fullname').value);
+  //   formData.append("phone", this.formGroup.get('phonenumber').value);
+  //   formData.append("gender", this.formGroup.get('gender').value);
+  //   formData.append("dob", this.formGroup.get('dob').value);
 
-    this.http.post('http://old-stuff-exchange-api.herokuapp.com/api/users/register' ,formData).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
-    )
+  //   this.http.post('http://old-stuff-exchange-api.herokuapp.com/api/users/register' ,formData).subscribe(
+  //     (response) => console.log(response),
+  //     (error) => console.log(error)
+  //   )
+  // }
+
+  onSubmit() {
+    const body = { 
+       userName: this.formGroup.get('username').value,
+       password: this.formGroup.get('password').value ,
+       email: this.formGroup.get('email').value ,
+       address: this.formGroup.get('address').value ,
+       fullName: this.formGroup.get('fullname').value ,
+       phone: this.formGroup.get('phonenumber').value ,
+       gender: this.formGroup.get('gender').value ,
+       dob: this.formGroup.get('dob').value ,
+      };
+    this.http.post<any>('http://old-stuff-exchange-api.herokuapp.com/api/users/register', body).subscribe(data => {
+        console.log("data", data)
+    });
   }
+
+
 }

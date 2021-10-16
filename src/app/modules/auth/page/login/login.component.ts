@@ -26,14 +26,14 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    var formData: any = new FormData();
-    formData.append("userName", this.formGroup.get('username').value);
-    formData.append("password", this.formGroup.get('password').value);
-
-    this.http.post('http://old-stuff-exchange-api.herokuapp.com/api/users/register' ,formData).subscribe(
-      (response) => console.log(response),
-      (error) => console.log(error)
-    )
+    const body = { 
+      userName: this.formGroup.get('username').value,
+      password: this.formGroup.get('password').value ,
+     };
+     const headers = { 'Authorization': 'Bearer my-token', 'My-Custom-Header': 'foobar' };
+   this.http.post<any>('http://old-stuff-exchange-api.herokuapp.com/api/users/login', body).subscribe(data => {
+       console.log("data", data)
+   });
   }
 
 }
