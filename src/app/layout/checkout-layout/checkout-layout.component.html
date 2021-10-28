@@ -1,0 +1,97 @@
+<app-header></app-header>
+<div class='content-header'>
+	<span class="fill-remaining-space" style="z-index: 1000000" [ngClass]="{'a' : true, 'sticky' : isSticky}">
+	  <button mat-icon-button [matMenuTriggerFor]="menu">
+		<mat-icon style="font-size: 30px">menu</mat-icon>
+	  </button>
+	  <mat-menu #menu="matMenu" [overlapTrigger]="false">
+		<button mat-menu-item>
+		  <mat-icon>phone_iphone</mat-icon>
+		  <span>Iphone Collections</span>
+		</button>
+		<button mat-menu-item>
+		  <mat-icon>smartphone</mat-icon>
+		  <span>Samsung Collections</span>
+		</button>
+		<button mat-menu-item>
+		  <mat-icon>devices</mat-icon>
+		  <span>Dell Laptop Collections</span>
+		</button>
+		<button mat-menu-item>
+		  <mat-icon>laptop</mat-icon>
+		  <span>Asus Laptop Collections</span>
+		</button>
+	  </mat-menu>
+	</span>
+
+  <form class="example-form">
+	  <mat-form-field class="example-full-width" appearance="fill">
+		<mat-label>Search in App</mat-label>
+		<input type="text" matInput placeholder="categories , clothes , macbook , etc , ...">
+		<mat-icon matSuffix>search</mat-icon>
+	  </mat-form-field>
+	</form>
+
+  <mat-icon class="cart-icon" matSuffix>shopping_cart</mat-icon>
+  <em>{{this.productCount + 1}}</em>
+
+  <img src="//icms-image.slatic.net/images/ims-web/0ef10cfa-7d61-46ec-8451-77bc12633907.jpg" alt="ZLP:Stanley Black Decker" class="zalo-pay" >
+</div>
+
+<app-voucher></app-voucher>
+
+
+<div class="wrap cf" *ngFor="let product of itemProduct">
+    <div class="heading cf">
+      <h1>My Cart</h1>
+      <a href="#" class="continue">Continue Shopping</a>
+    </div>
+    <div class="cart">
+      <ul class="cartWrap">
+        <li class="items odd">
+
+      <div class="infoWrap"> 
+          <div class="cartSection">
+          <img src={{product.Images[0].address}} alt="" class="itemImg" />
+            <h3 style="margin-top: 30px">{{product.name}}</h3>
+          
+             <p> <input type="number"  class="qty" placeholder="3"/>{{product.quantity}} quantities</p>
+          
+            <p class="stockStatus"> In Stock</p>
+          </div>  
+      
+          
+          <div class="prodTotal cartSection">
+          </div>
+                <div class="cartSection removeWrap">
+             <a href="#" class="remove">x</a>
+          </div>
+        </div>
+        </li>
+       
+        
+        
+        <!--<li class="items even">Item 2</li>-->
+   
+      </ul>
+    </div>
+    
+    <div class="promoCode"><label for="promo">Have A Promo Code?</label><input type="text" name="promo" placholder="Enter Code" />
+    <a href="#" class="btn"></a></div>
+    
+    <div class="subtotal cf">
+      <ul>
+        <li class="totalRow"><span class="label">Subtotal</span><span class="value">$35.00</span></li>
+        
+            <li class="totalRow"><span class="label">Shipping</span><span class="value">$5.00</span></li>
+        
+              <li class="totalRow"><span class="label">Tax</span><span class="value">$4.00</span></li>
+              <li class="totalRow final"><span class="label">Total</span><span class="value">$44.00</span></li>
+        <li (click)="addToCart()" class="totalRow"><a href="/detail" (click)="addToCart()" class="btn continue">Checkout</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+<app-contact-us></app-contact-us>
+<app-footer></app-footer>

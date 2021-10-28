@@ -1,5 +1,6 @@
 import { HostListener } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { ValidationService } from 'src/app/shared/service/validation.service';
 
 @Component({
   selector: 'app-search-input',
@@ -8,14 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchInputComponent implements OnInit {
   isSticky: boolean = false;
+  productCount: number;
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     this.isSticky = window.pageYOffset >= 250;
   }
-  constructor() { }
+  constructor(private dataService: ValidationService) { }
 
   ngOnInit(): void {
+     this.productCount = this.dataService.productCount
   }
 
 }

@@ -1,7 +1,28 @@
 <div class='content-header'>
-    <a href="/">
-      <img src="//laz-img-cdn.alicdn.com/images/ims-web/TB1T7K2d8Cw3KVjSZFuXXcAOpXa.png" alt="Online Shopping Lazada.vn Logo" class="logo-img"  [ngClass]="{'a' : true, 'sticky' : isSticky}">
-    </a>
+      <span class="fill-remaining-space" style="z-index: 1000000" [ngClass]="{'a' : true, 'sticky' : isSticky}">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon style="font-size: 30px">menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+          <button mat-menu-item>
+            <mat-icon>phone_iphone</mat-icon>
+            <span>Iphone Collections</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>smartphone</mat-icon>
+            <span>Samsung Collections</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>devices</mat-icon>
+            <span>Dell Laptop Collections</span>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>laptop</mat-icon>
+            <span>Asus Laptop Collections</span>
+          </button>
+        </mat-menu>
+      </span>
+  
     <form class="example-form">
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Search in App</mat-label>
@@ -9,6 +30,9 @@
           <mat-icon matSuffix>search</mat-icon>
         </mat-form-field>
       </form>
+
     <mat-icon class="cart-icon" matSuffix>shopping_cart</mat-icon>
+    <em>{{this.productCount}}</em>
+
     <img src="//icms-image.slatic.net/images/ims-web/0ef10cfa-7d61-46ec-8451-77bc12633907.jpg" alt="ZLP:Stanley Black Decker" class="zalo-pay" >
 </div>

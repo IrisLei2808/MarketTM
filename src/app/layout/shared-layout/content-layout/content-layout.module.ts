@@ -43,7 +43,10 @@ import { TruncatePipe } from 'src/app/shared/component/flash-sale-card/flash-sal
     FooterComponent,
     SearchInputComponent,
     ContactUsComponent,
-    VoucherComponent
+    VoucherComponent,
+    FlashSaleComponent,
+    JustForYouComponent,
+    FlashSaleCardComponent
   ],
   imports: [CommonModule, MaterialModule, CountdownModule],
 })

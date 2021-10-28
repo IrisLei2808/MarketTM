@@ -1,6 +1,6 @@
 img {
     width: 330px;
-    height: 330px;
+    height: 360px;
     margin-left: 90px;
     margin-top: 30px;
 }
@@ -10,8 +10,13 @@ h1 {
      font-size: 20px;
      font-weight: 400;
      margin-left: 40px;
-     margin-top: 30px
+     margin-top: 10px
 }
+ h2 {
+     margin-left: 40px;
+     margin-top: 20px;
+     color: orangered;
+ }
 .pdp-review-summary__stars .star {
     width: 12px;
     height: 12px;
@@ -35,20 +40,7 @@ a {
     font-size: 30px;
 }
 
-button {
-    width: 225px;
-    height: 44px;
-    margin-left: 40px;
-    margin-top: 15px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all .3s ease-out;
-    outline: none;
-    overflow: visible;
-    background-color: orange;
-}
+
 
 .delivery-header__title {
     font-size: 20px;
@@ -89,3 +81,189 @@ button {
     margin-top: 200px;
     margin-left: -310px;
 }
+
+
+.be-comment-block {
+  //  margin-bottom: 50px !important;
+    padding: 50px 70px;
+}
+
+.comments-title {
+    font-size: 16px;
+    color: #262626;
+ //   margin-bottom: 15px;
+    font-family: 'Conv_helveticaneuecyr-bold';
+}
+
+.be-img-comment {
+    width: 60px;
+ //   height: 60px;
+    float: left;
+  //  margin-bottom: 15px;
+}
+
+.be-ava-comment {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.be-comment-content {
+    margin-left: 80px;
+}
+
+.be-comment-content span {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.be-comment-name {
+    font-size: 13px;
+    font-family: 'Conv_helveticaneuecyr-bold';
+}
+
+.be-comment-content a {
+    color: #383b43;
+}
+
+.be-comment-content span {
+    display: inline-block;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.be-comment-time {
+    text-align: right;
+}
+
+.be-comment-time {
+    font-size: 11px;
+    color: #b4b7c1;
+}
+
+.be-comment-text {
+    font-size: 13px;
+    line-height: 18px;
+    color: #7a8192;
+    display: block;
+    background: #f6f6f7;
+    padding: 15px 20px 20px 20px;
+}
+
+.form-group.fl_icon .icon {
+    position: absolute;
+    top: 1px;
+    left: 16px;
+    width: 48px;
+    height: 48px;
+    background: #f6f6f7;
+    color: #b5b8c2;
+    text-align: center;
+    line-height: 50px;
+    -webkit-border-top-left-radius: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -moz-border-radius-topleft: 2px;
+    -moz-border-radius-bottomleft: 2px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.form-group .form-input {
+    font-size: 13px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #b4b7c1;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.form-group.fl_icon .form-input {
+    padding-left: 70px;
+}
+
+.form-group textarea.form-input {
+    height: 150px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 1220px !important;
+    width: 100%;
+    margin-left: 80px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+
+  .fill-remaining-space {
+    cursor: pointer;
+    z-index: 1000000;
+}
+.content-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.a {
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 0px;
+  left: 00px;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 688px;
+    width: 100%;
+    margin-left: 70px;
+    height: 50px;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  .cart-icon {
+      cursor: pointer;
+      padding-left: 40px;
+      background-size: cover;
+      font-size: 45px;
+      color: orange;
+  }
+  
+  .zalo-pay {
+    width: 180px;
+    height: 45px;
+    margin-left: 100px;
+    margin-bottom: -15px;
+    cursor: pointer;
+    margin-top: -10px;
+  }
+
+  .mat-icon {
+    cursor: pointer;
+  }
+
+  em {
+    height: 24px;
+    background-color: red;
+    font-style: normal;
+    padding: 0;
+    border-radius: 50px;
+    position: absolute;
+    width: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: #FFF;
+    font-weight: bold;
+    margin-left: 490px;
+    cursor: pointer;
+  }
+
