@@ -1,0 +1,34 @@
+<app-header></app-header>
+<app-search-input></app-search-input>
+<app-voucher></app-voucher>
+
+<div style="display: flex; margin-top: 20px; width: 100%">
+   <mat-card style="display: flex" *ngFor="let product of itemProduct" (click)="navigateDetail(product.idProduct)">
+      <mat-card class="listItem">
+        <div class="productImage">
+          <img [src]="product.Images[0].address" alt="" />
+        </div>
+        <div class="content">
+          <p style="height: 45px">{{ product.name }}</p>
+          <p style="font-size: 18px; color: orange">{{ product.price }} đ</p>
+        </div>
+      </mat-card>
+    </mat-card>
+</div>
+
+<div style="display: flex; width: 100%; margin-left: 0px;">
+  <mat-card style="display: flex" *ngFor="let product of secondItemProduct" (click)="navigateDetail(product.idProduct)">
+     <mat-card class="listItem">
+       <div class="productImage">
+         <img [src]="product.Images[0].address" alt="" />
+       </div>
+       <div class="content">
+         <p style="height: 45px">{{ product.name }}</p>
+         <p style="font-size: 18px; color: orange">{{ product.price }} đ</p>
+       </div>
+     </mat-card>
+   </mat-card>
+</div>
+
+<app-contact-us></app-contact-us>
+<app-footer></app-footer>

@@ -21,6 +21,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonToggleModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ]
 })
 export class MaterialModule { }

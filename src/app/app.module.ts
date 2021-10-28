@@ -12,12 +12,16 @@ import { AuthModule } from './modules/auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailLayoutComponent } from './layout/detail-layout/detail-layout.component';
 import { MaterialModule } from './shared/material.module';
+import { MoreLayoutComponent } from './layout/more-layout/more-layout.component';
+import { CheckoutLayoutComponent } from './layout/checkout-layout/checkout-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthLayoutComponent,
     DetailLayoutComponent,
+    MoreLayoutComponent,
+    CheckoutLayoutComponent,
   ],
   imports: [
     BrowserModule,

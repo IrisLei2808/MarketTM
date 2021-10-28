@@ -1,21 +1,61 @@
 <app-header></app-header>
-<app-search-input></app-search-input>
+<div class='content-header'>
+	<span class="fill-remaining-space" style="z-index: 1000000" [ngClass]="{'a' : true, 'sticky' : isSticky}">
+	  <button mat-icon-button [matMenuTriggerFor]="menu">
+		<mat-icon style="font-size: 30px">menu</mat-icon>
+	  </button>
+	  <mat-menu #menu="matMenu" [overlapTrigger]="false">
+		<button mat-menu-item>
+		  <mat-icon>phone_iphone</mat-icon>
+		  <span>Iphone Collections</span>
+		</button>
+		<button mat-menu-item>
+		  <mat-icon>smartphone</mat-icon>
+		  <span>Samsung Collections</span>
+		</button>
+		<button mat-menu-item>
+		  <mat-icon>devices</mat-icon>
+		  <span>Dell Laptop Collections</span>
+		</button>
+		<button mat-menu-item>
+		  <mat-icon>laptop</mat-icon>
+		  <span>Asus Laptop Collections</span>
+		</button>
+	  </mat-menu>
+	</span>
+
+  <form class="example-form">
+	  <mat-form-field class="example-full-width" appearance="fill">
+		<mat-label>Search in App</mat-label>
+		<input type="text" matInput placeholder="categories , clothes , macbook , etc , ...">
+		<mat-icon matSuffix>search</mat-icon>
+	  </mat-form-field>
+	</form>
+
+  <mat-icon class="cart-icon" matSuffix (click)="navigateCheckout()">shopping_cart</mat-icon>
+  <em>{{this.productCount}}</em>
+
+  <img src="//icms-image.slatic.net/images/ims-web/0ef10cfa-7d61-46ec-8451-77bc12633907.jpg" alt="ZLP:Stanley Black Decker" class="zalo-pay" >
+</div>
+
 <app-voucher></app-voucher>
-<div style="display: flex;"> 
-    <img class="pdp-mod-common-image gallery-preview-panel__image" src="//vn-live-05.slatic.net/p/c1a6e064410c474980cbff910e75c474.jpg_720x720q80.jpg_.webp">
+<div style="display: flex;" *ngFor="let product of itemProduct"> 
+    <img class="detail-img" src={{product.Images[0].address}}>
     <div>
-        <h1>Máy Hút Bụi Mini, Máy Hút Bụi Cầm Tay, Máy Hút Bụi, Hút Bụi Ô Tô - Thiết Kế Cầm Tay Với Lực Hút Cực Mạnh Cùng 3 Đầu Hút Giúp Máy Hoạt Động Hiệu Quả Trong Mọi Góc Độ, Ngóc Ngách Của Xe - Bảo hành 1 đổi 1. Số Lượng Có Hạn - SALE CỰC SỐC!!!</h1>
-        <div style="margin-left: 40px; border-bottom: 1px solid black; height: 35px">
+		<h2>{{product.name}}</h2>
+        <h1>{{product.description}}</h1>
+
+        <div style="margin-left: 40px; border-bottom: 1px solid black; height: 35px; margin-top: 30px">
             <a>59 Ratings</a>
             <a style="margin-left:30px;">1 Answered Questions</a>
             <mat-icon aria-hidden="false" aria-label="Example home icon" style="color: rgb(236, 78, 39); float: right; margin-top: -3px;">favorite</mat-icon>
         </div>
              
         <div style="height: 35px; margin-top: 20px;">
-            <a class="price">đ 250.00</a>
+            <a class="price">đ {{product.price}}</a>
             <a style="float: right;">Want to changed ? Categories </a>
         </div>
-        <button mat-raised-button color="warn">Buy Now</button>
+        <button mat-raised-button color="warn" style="margin-left: 40px; width: 180px; height: 50px" (click)="addToCart()">Add To Cart</button>
     </div>
     <p class="delivery-header__title">Delivery Details</p>
     <div>
@@ -38,6 +78,86 @@
     <mat-icon style="color: gray" class="verified_user">verified_user</mat-icon>
     <p style="margin-top: 295px; margin-left: 20px;border-bottom: 1px solid black; width: 280px">Warranty is available</p>
 </div>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="be-comment-block">
+	<h1 class="comments-title">Comments (3)</h1>
+	<div class="be-comment" style="margin-top: -80px">
+		<div class="be-img-comment">	
+			<a href="blog-detail-2.html">
+				<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
+			</a>
+		</div>
+		<div class="be-comment-content">
+			
+				<span class="be-comment-name">
+					<a href="blog-detail-2.html">Ravi Sah</a>
+					</span>
+				<span class="be-comment-time">
+					<i class="fa fa-clock-o"></i>
+					May 27, 2015 at 3:14am
+				</span>
 
+			<p class="be-comment-text" style="margin-left: 70px;">
+				Pellentesque gravida tristique ultrices. 
+				Sed blandit varius mauris, vel volutpat urna hendrerit id. 
+				Curabitur rutrum dolor gravida turpis tristique efficitur.
+			</p>
+		</div>
+	</div>
+	<div class="be-comment">
+		<div class="be-img-comment">	
+			<a href="blog-detail-2.html">
+				<img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" class="be-ava-comment">
+			</a>
+		</div>
+		<div class="be-comment-content">
+			<span class="be-comment-name">
+				<a href="blog-detail-2.html">Phoenix, the Creative Studio</a>
+			</span>
+			<span class="be-comment-time">
+				<i class="fa fa-clock-o"></i>
+				May 27, 2015 at 3:14am
+			</span>
+			<p class="be-comment-text" style="margin-left: 70px;">
+				Nunc ornare sed dolor sed mattis. In scelerisque dui a arcu mattis, at maximus eros commodo. Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque. Duis eleifend lorem non ant. Proin ut ornare lectus, vel eleifend est. Fusce hendrerit dui in turpis tristique blandit.
+			</p>
+		</div>
+	</div>
+	<div class="be-comment">
+		<div class="be-img-comment">	
+			<a href="blog-detail-2.html">
+				<img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" class="be-ava-comment">
+			</a>
+		</div>
+		<div class="be-comment-content">
+			<span class="be-comment-name">
+				<a href="blog-detail-2.html">Cüneyt ŞEN</a>
+			</span>
+			<span class="be-comment-time">
+				<i class="fa fa-clock-o"></i>
+				May 27, 2015 at 3:14am
+			</span>
+			<p class="be-comment-text" style="margin-left: 70px;">
+				Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque. Duis eleifend lorem non ant
+			</p>
+		</div>
+	</div>
+	<form class="example-form">
+		<mat-form-field class="example-full-width" appearance="fill">
+		  <mat-label>Full Name</mat-label>
+		  <input matInput placeholder="Ex. Pizza" value="Arian Shaller">
+		</mat-form-field>
+	  
+		<mat-form-field class="example-full-width" appearance="fill">
+		  <mat-label>Leave a comment</mat-label>
+		  <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+		</mat-form-field>
+		<button mat-raised-button color="primary" style="width: 180px; height: 50px;float: right; margin-top: -5px">Submit</button>
+	  </form>
+	  
+</div>
+</div>  
 <app-contact-us></app-contact-us>
 <app-footer></app-footer>
+

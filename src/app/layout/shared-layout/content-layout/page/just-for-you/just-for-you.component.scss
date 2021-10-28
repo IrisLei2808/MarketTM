@@ -2,7 +2,6 @@
     width: 1270px;
     margin: 0 auto;
     border-width: 6px;
-   margin-top:200px
   }
   h3 {
     margin-top: 20px;
@@ -68,3 +67,41 @@
       text-transform: uppercase;
       cursor: pointer;
       }
+
+      .listItem {
+        height: 305px;
+        width: 235px;
+        padding: 0;
+        box-shadow: none;
+      
+        &:hover {
+          border-radius: 5px;
+          box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+          cursor: pointer;
+        }
+      }
+      
+      .productImage {
+        width: 100%;
+        height: 60%;
+        border-radius: 5px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        background-color: rgb(160, 157, 157, 0.3);
+      }
+      
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 5px;
+        padding-left: 10px;
+      
+        .price {
+          display: flex;
+        }
+      }
+      
